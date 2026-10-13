@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
+import logo from "./assets/logo.png";
 import "./App.css";
 
 const FUNCTIONS = ["Engagement", "Haldi", "Mehndi", "Lagan", "Wedding", "Reception"];
@@ -61,7 +62,7 @@ function Bill({ d, funcs, dels, balance, innerRef }) {
   return (
     <div id="bill" ref={innerRef} className="bill">
       <div className="b-head">
-        <img src="src//assets//logo.png" alt="Ram Photography" className="b-logo" />
+        <img src={logo} alt="Ram Photography" className="b-logo" />
         <div className="b-right">
           <div className="b-title">BOOKING / RECEIPT</div>
           <p><b>No:</b> {d.no}</p>
